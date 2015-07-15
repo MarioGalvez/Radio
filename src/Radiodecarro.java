@@ -1,23 +1,24 @@
 
- import java.math.BigDecimal; // libreria para darle formato a los datos float
+
+ import java.math.BigDecimal; // libreria para darle formato a los datos double
 
 
 public class Radiodecarro implements Radio{
 	private boolean estado;		//indica si el radio esta on o off
 	private int AMFM;			//indica si el radio esta en AM oFM
-	private float[] botonesAM;	//las memorias guardadas de AM
-	private float[] botonesFM;	//las memorias guardadas de FM
-	private float estacion;		//la estacion sintonizada actualmente
-	private float intervalo;	//en cuanto se va a cambiar la estacion
-	private float AM;			//ultima estacion sintonizada en AM
-	private float FM;			//ultima estacion sintonizada en FM
+	private double[] botonesAM;	//las memorias guardadas de AM
+	private double[] botonesFM;	//las memorias guardadas de FM
+	private double estacion;		//la estacion sintonizada actualmente
+	private double intervalo;	//en cuanto se va a cambiar la estacion
+	private double AM;			//ultima estacion sintonizada en AM
+	private double FM;			//ultima estacion sintonizada en FM
 	
 	//constructor predeterminado
 	public Radiodecarro(){
-		estado=false;
+		estado=true;
 		AMFM=0;
-		botonesAM=new float[12];
-		botonesFM=new float[12];
+		botonesAM=new double[12];
+		botonesFM=new double[12];
 		estacion=530.00f;
 		intervalo=10.00f;
 		AM=530.00f;
@@ -121,7 +122,7 @@ public class Radiodecarro implements Radio{
 		int decimalPlaces = 2;
 		BigDecimal bd = new BigDecimal(estacion);
 		bd = bd.setScale(decimalPlaces, BigDecimal.ROUND_HALF_UP);
-		estacion = (float) bd.doubleValue(); // se le da un formato con dos decimales a 'emisoraActualFM'
+		estacion = (double) bd.doubleValue(); // se le da un formato con dos decimales a 'emisoraActualFM'
 		return estacion;
 	}
 	
