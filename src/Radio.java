@@ -24,7 +24,7 @@ public interface Radio{
 	
 	public void memoria(int pos);
 	
-	public float getEmisora();
+	public double getEmisora();
         
         
 }
