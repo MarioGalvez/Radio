@@ -18,7 +18,7 @@ public class Radiodecarro implements Radio {
     private float AM;
     private float FM;
     
-    public Radiocarro(){
+    public Radiodecarro(){
         estado=false;
         AMFM=0;
         botonesAM=new float[12];
@@ -55,7 +55,7 @@ public class Radiodecarro implements Radio {
     public int getAMFM(){
         return AMFM;
     }
-    public int sincronizar(boolean ud){
+    public void sincronizar(boolean ud){
         if(ud){
             estacion+=intervalo;
         }
@@ -79,9 +79,23 @@ public class Radiodecarro implements Radio {
             }
         }
     }
-    public void guardar(int pos){}
-    public void memoria(int pos){}
-    public float getEmisora(){}
-    
-    
+    public void guardar(int pos){
+        if(AMFM==0){
+            botonesAM[pos-1]=estacion;
+        }
+        else{
+            botonesFM[pos-1]=estacion;
+        }
+    }
+    public void memoria(int pos){
+        if(AMFM==0){
+            estacion=botonesAM[pos-1];
+        }
+        else{
+            estacion=botonesFM[pos-1];
+        }
+    }
+    public float getEmisora(){
+        return estacion;
+    } 
 }
