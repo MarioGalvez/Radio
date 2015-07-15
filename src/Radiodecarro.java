@@ -1,4 +1,7 @@
-
+//Universidad del Valle de Guatemala 
+//Algoritmos y Estructura de datos
+//integrantes: Luisa Arboleda, Mario Galvez, Sebastian Castillo, Diego Rosales 
+//seccion: 30 
 
  import java.math.BigDecimal; // libreria para darle formato a los datos double
 
