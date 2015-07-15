@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Mario Fernando
- */
+
+
+
 public class Pioneer extends javax.swing.JFrame{
 
     Radio rad = new Radiodecarro();
@@ -376,10 +370,10 @@ public class Pioneer extends javax.swing.JFrame{
         // hace que el boton power active o desactive los botones dependiendo de si esta prendido o no el radio.
         boolean est = rad.getEstado();
 		if(est == false){
-			rad.setEstado(true);
+			rad.setESTADO(true);
 		}
 		if(est == true){
-			rad.setEstado(false);
+			rad.setESTADO(false);
 		}	   
 			   
 			   
@@ -435,7 +429,7 @@ public class Pioneer extends javax.swing.JFrame{
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // cambia la frecuencia y la imprime.
-        rad.sintonizar(true);  
+        rad.Sintonizar(true);  
         jLabel1.setText("Frequency:" + rad.getEmisora());    
     }                                        
 
@@ -461,10 +455,10 @@ public class Pioneer extends javax.swing.JFrame{
     }                                         
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // obtiene donde quiere guardar la senal y la guarda.
+        // obtiene donde quiere Guardar la senal y la guarda.
         
         int bo = jComboBox1.getSelectedIndex();
-        rad.guardar(bo);
+        rad.Guardar(bo);
         
         
     }                                        
@@ -475,80 +469,80 @@ public class Pioneer extends javax.swing.JFrame{
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        rad.memoria(1);
+        rad.Memoria(1);
         jLabel1.setText("Memory 2 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         
-        rad.memoria(0);
+        rad.Memoria(0);
         jLabel1.setText("Memory 1 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        rad.memoria(2);
+        rad.Memoria(2);
         jLabel1.setText("Memory 3 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        rad.memoria(3);
+        rad.Memoria(3);
         jLabel1.setText("Memory 4 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        rad.memoria(4);
+        rad.Memoria(4);
         jLabel1.setText("Memory 5 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        rad.memoria(5);
+        rad.Memoria(5);
         jLabel1.setText("Memory 6 Frequency:" + rad.getEmisora());
     }                                        
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        rad.memoria(6);
+        rad.Memoria(6);
         jLabel1.setText("Memory 7 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-         rad.memoria(7);
+         rad.Memoria(7);
          jLabel1.setText("Memory 8 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        rad.memoria(8);
+        rad.Memoria(8);
         jLabel1.setText("Memory 9 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        rad.memoria(9);
+        rad.Memoria(9);
         jLabel1.setText("Memory 10 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        rad.memoria(10);
+        rad.Memoria(10);
         jLabel1.setText("Memory 11 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        rad.memoria(11);
+        rad.Memoria(11);
         jLabel1.setText("Memory 12 Frequency:" + rad.getEmisora());
     }                                         
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        rad.sintonizar(false);  
+        rad.Sintonizar(false);  
         jLabel1.setText("Frequency:" + rad.getEmisora());    
     }
 

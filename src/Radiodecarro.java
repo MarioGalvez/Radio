@@ -32,7 +32,7 @@ public class Radiodecarro implements Radio{
 	}
 	
 	//setEstado
-	public void setEstado(boolean estado){
+	public void setESTADO(boolean estado){
 		this.estado=estado;
 	}
 	
@@ -67,7 +67,7 @@ public class Radiodecarro implements Radio{
 	
 	//depenciendo del valor enviado en el parametro varia estacion
 	//en una cantidad guardada en intervalo hacia ariba o hacia abajo
-	public void sintonizar(boolean ud){
+	public void Sintonizar(boolean ud){
 		if (ud){
 			estacion+=intervalo;
 		}
@@ -97,7 +97,7 @@ public class Radiodecarro implements Radio{
 	
 	//Guarda la estacon actual en la posicion de memoria enviada
 	//en el parametro en la lista corespondiente al tipo de frecuencia
-	public void guardar(int pos){
+	public void Guardar(int pos){
 		if (AMFM==0){
 			botonesAM[pos]=estacion;
 		}
@@ -108,7 +108,7 @@ public class Radiodecarro implements Radio{
 	
 	//Guarda en estacion el valor de la posicion enviada en el parametro
 	//en la lista correspondiente al ancho de banda seleccionado actualmente
-	public void memoria(int pos){
+	public void Memoria(int pos){
 		if (AMFM==0){
 			estacion=botonesAM[pos];
 		}
